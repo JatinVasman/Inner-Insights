@@ -1,0 +1,1113 @@
+/* ── Hero Banner ── */
+.hero {
+  background-color: var(--surface-alt);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroInnerLeft {
+  max-width: 800px;
+  margin: 0;
+  text-align: left;
+}
+
+.heroInnerLeft .subtitle {
+  margin: 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ── Calculator Navigation Tabs ── */
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: -1.75rem 0 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navTab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.navTabActive,
+.navTabActive:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 83, 158, 0.25);
+}
+
+/* ── Calculator Layout ── */
+.calculatorCard {
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 4rem;
+}
+
+.calcGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.calcIcon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.calcTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.calcDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ── Form Inputs ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-light);
+  background-color: #fcfbf9;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  background-color: var(--surface-white);
+  box-shadow: 0 0 0 4px rgba(118, 83, 158, 0.1);
+}
+
+/* System toggle (Chaldean/Pythagorean) */
+.systemToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  background-color: var(--surface-alt);
+  padding: 0.3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.toggleBtn {
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: calc(var(--radius-sm) - 4px);
+  color: var(--text-secondary);
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.toggleBtnActive {
+  background-color: var(--surface-white);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Result Side View ── */
+.resultSection {
+  background-color: var(--surface-alt);
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 320px;
+  color: var(--text-secondary);
+  gap: 1rem;
+}
+
+.emptyState p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.resultContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Result Elements ── */
+.resultHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.numberBadge {
+  width: 72px;
+  height: 72px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: white;
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(118, 83, 158, 0.3);
+}
+
+.resultHeaderMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.resultTitle {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background-color: var(--surface-white);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 0.25rem;
+}
+
+.metaItem strong {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaItem span {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.detailsBlock h4 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.traitsText {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.descText {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.actionsBlock {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+/* ── Name Breakdown Letter Cards ── */
+.breakdownBlock {
+  background-color: var(--surface-white);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.breakdownBlock h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.letterGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.letterCard {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  width: 44px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.letterCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.letterChar {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.letterVal {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+/* ── Mobile Score Radial ── */
+.mobileScoreBlock {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1.5rem;
+}
+
+.radialWrapper {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+.radialSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radialBg {
+  fill: none;
+  stroke: var(--border-light);
+  stroke-width: 6;
+}
+
+.radialProgress {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 251.2;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.radialCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.radialPercent {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.radialLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.mobileSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.luckBadge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.luckAuspicious {
+  background-color: rgba(13, 148, 136, 0.1);
+  color: #0d9488;
+}
+
+.luckNeutral {
+  background-color: rgba(180, 83, 9, 0.1);
+  color: #b45309;
+}
+
+.warningAlert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.warningAlert svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ── Lo Shu Grid Visual ── */
+.loshuFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 2rem;
+}
+
+.loshuGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--border-light);
+  padding: 6px;
+  border-radius: var(--radius-md);
+  width: 250px;
+  height: 250px;
+  box-shadow: var(--shadow-sm);
+}
+
+.loshuRow {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+
+.loshuCell {
+  flex: 1;
+  background-color: var(--surface-white);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loshuCellPresent {
+  background-color: rgba(118, 83, 158, 0.05);
+  box-shadow: inset 0 0 10px rgba(118, 83, 158, 0.04);
+}
+
+.loshuCellEmpty {
+  background-color: #faf9f6;
+  opacity: 0.55;
+}
+
+.loshuWatermark {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  opacity: 0.25;
+  user-select: none;
+}
+
+.loshuCellContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.loshuVal {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(118, 83, 158, 0.08);
+}
+
+.loshuCount {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-top: 0.1rem;
+}
+
+/* Lo Shu hover highlighting */
+.loshuCellHighlight {
+  background-color: rgba(207, 170, 118, 0.15);
+  border: 1.5px solid var(--accent-gold);
+  transform: scale(1.03);
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(207, 170, 118, 0.15);
+}
+
+.loshuMeta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Lo Shu Planes list */
+.planeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.planeCard {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  background-color: var(--surface-white);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.planeCardComplete {
+  border-color: rgba(13, 148, 136, 0.2);
+  background-color: rgba(13, 148, 136, 0.02);
+}
+
+.planeCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.planeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.planeHeader strong {
+  color: var(--text-primary);
+}
+
+.planeStatusComplete {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0d9488;
+  text-transform: uppercase;
+}
+
+.planeStatusIncomplete {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.planeDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Remedies */
+.remedyBlock {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.remedyBlock h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.remedyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.remedyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.remedyBadge {
+  background-color: rgba(180, 83, 9, 0.08);
+  color: #b45309;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.remedyText {
+  color: var(--text-secondary);
+}
+
+/* ── Call To Action Card ── */
+.ctaCard {
+  background: linear-gradient(135deg, var(--footer-bg), #2c2040);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(207, 170, 118, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, rgba(118, 83, 158, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ctaContent {
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.ctaDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Tool listing grid (main /tools page) ── */
+.toolListingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.toolCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--surface-white);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.toolCard:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.toolCardPopular {
+  position: absolute;
+  top: -1px;
+  right: 1rem;
+  background: var(--accent-gold);
+  color: #2a1a00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0 0 6px 6px;
+}
+
+.toolCardIconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(118, 83, 158, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.toolCardTag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.toolCardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.toolCardDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.toolCardCta {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+/* ── Tool individual page breadcrumb ── */
+.toolBreadcrumb {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: color 0.2s;
+}
+
+.toolBreadcrumb:hover {
+  color: var(--primary);
+}
+
+/* ── calcNote ── */
+.calcNote {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* ── Score bar (business / compatibility) ── */
+.scoreBarBlock {
+  margin: 1.25rem 0;
+}
+
+.scoreBarLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.scoreBarTrack {
+  height: 10px;
+  background: var(--surface-alt);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s ease;
+}
+
+/* ── Compatibility specific ── */
+.compatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.compatPerson {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.compatPerson small {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.compatBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.compatScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.compatScoreNum {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.compatScoreLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.compatTwoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.compatStrength,
+.compatChallenge {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.compatStrength p,
+.compatChallenge p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0.2rem 0 0;
+}
+
+.compatStrength strong,
+.compatChallenge strong {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+/* ── Personal Day cycles ── */
+.cycleRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cycleBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  min-width: 80px;
+}
+
+.cycleBadgeNum {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.cycleBadgeLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ── Signature trait grid ── */
+.signatureTraitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.signatureTrait {
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+}
+
+.signatureTraitLabel {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.signatureTraitMeaning {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.signatureCta {
+  background: linear-gradient(135deg, var(--primary), #9a6fd8);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.signatureCta h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.signatureCta p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+
+/* ── planeCardIncomplete ── */
+.planeCardIncomplete {
+  opacity: 0.75;
+}
+
+/* ── Responsive Styling ── */
+@media (max-width: 1024px) {
+  .calcGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .resultSection {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .toolListingGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .toolListingGrid { grid-template-columns: repeat(2, 1fr); }
+  .signatureTraitGrid { grid-template-columns: 1fr; }
+  .compatTwoCol { grid-template-columns: 1fr; }
+  .cycleRow { gap: 0.5rem; }
+  .cycleBadge { min-width: 70px; padding: 0.75rem 0.9rem; }
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .calculatorCard {
+    padding: 2rem;
+  }
+  
+  .planeList {
+    grid-template-columns: 1fr;
+  }
+  
+  .loshuFlex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolListingGrid { grid-template-columns: 1fr; }
+  .compatHeader { flex-direction: column; }
+}

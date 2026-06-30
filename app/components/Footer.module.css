@@ -1,0 +1,259 @@
+.footerWrapper {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 4rem 0 0 0;
+  margin-top: 5rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr 2fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.logoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoIcon {
+  color: var(--accent-gold);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTextTitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.logoTextSubtitle {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.brandDesc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.colTitle {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkItem a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.linkItem a:hover {
+  color: var(--accent-gold);
+}
+
+.newsletterDesc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.newsletterForm {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletterInput {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.newsletterInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletterSubmit {
+  background-color: var(--primary);
+  color: white;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.newsletterSubmit:hover {
+  background-color: var(--primary-hover);
+}
+
+.locations {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.locationsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.locationsTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.trustIndicators {
+  display: flex;
+  gap: 2rem;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .trustIndicators {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.creditBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.creditLink {
+  color: var(--accent-gold);
+  transition: color 0.3s ease;
+}
+
+.creditLink:hover {
+  color: white;
+  text-decoration: underline;
+}
