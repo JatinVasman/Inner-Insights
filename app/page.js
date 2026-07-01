@@ -18,7 +18,8 @@ import {
   Briefcase,
   Star,
   Activity,
-  Heart
+  Heart,
+  PenTool
 } from 'lucide-react';
 import ServicesSection from './components/ServicesSection';
 import styles from './page.module.css';
