@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import {
-  Calculator, PenTool, Watch, Smartphone, Briefcase, Clock, Map, Heart,
-  Brain, Sparkles, Timer, Palette, CreditCard, Edit, Home, Building2,
-  Car, Landmark, Mail, Tag, CalendarDays, Users, Gem, Compass, BookOpen,
+  Calculator, PenTool, Smartphone, Briefcase, Map, Heart,
+  Brain, Sparkles, Timer, Palette, CreditCard, Edit, Home,
+  Car, Landmark, Mail, Tag, CalendarDays, Users, BookOpen,
   Star, ArrowRight,
 } from 'lucide-react';
 import styles from './services.module.css';
@@ -15,7 +15,6 @@ const CAT_STYLES = {
   'Numerology':       { bg: 'rgba(118,83,158,0.1)',   color: 'var(--primary)' },
   'Business & Brand': { bg: 'rgba(160,120,0,0.1)',    color: '#8a6500' },
   'Graphology':       { bg: 'rgba(13,148,136,0.1)',   color: '#0d7369' },
-  'Vastu & Energy':   { bg: 'rgba(217,119,6,0.1)',    color: '#b45309' },
   'Coaching':         { bg: 'rgba(79,70,229,0.1)',    color: '#4f46e5' },
 };
 
@@ -149,42 +148,6 @@ const services = [
     Icon: Edit,
     desc: 'Your signature reveals your self-image, ambition and the way the world perceives you. Identify what it says today and design one that invites confidence and success.',
   },
-  // ── Vastu & Energy ───────────────────────────────────────────────────────────
-  {
-    title: 'Wristwatch Analysis',
-    slug: '/contact',
-    category: 'Vastu & Energy',
-    Icon: Watch,
-    desc: 'The wristwatch you wear influences your timing, punctuality and decision-making energy. Find the right dial colour, strap material and wrist for your number.',
-  },
-  {
-    title: 'Wall Clock Vastu',
-    slug: '/contact',
-    category: 'Vastu & Energy',
-    Icon: Clock,
-    desc: 'Direction, shape and colour of your wall clock affect energy flow at home and at work. Correct placement improves timing, productivity and financial momentum.',
-  },
-  {
-    title: 'Vastu Consultation',
-    slug: '/contact',
-    category: 'Vastu & Energy',
-    Icon: Building2,
-    desc: 'A home and office energy assessment based on Vastu principles. Simple, wall-free remedies that improve the flow of health, wealth and harmony in your space.',
-  },
-  {
-    title: 'Gemstone & Rudraksha',
-    slug: '/contact',
-    category: 'Vastu & Energy',
-    Icon: Gem,
-    desc: 'The right gemstone or rudraksha worn correctly can amplify the strengths of your number. Get a personalised recommendation with full guidance on activation and care.',
-  },
-  {
-    title: 'Lucky Colour & Direction',
-    slug: '/contact',
-    category: 'Vastu & Energy',
-    Icon: Compass,
-    desc: 'Identify your lucky colours for clothing, interiors and branding, and the best directions for your desk, bed and entrance — small shifts with meaningful energetic effects.',
-  },
   // ── Coaching ─────────────────────────────────────────────────────────────────
   {
     title: 'Mokshapatam Coaching',
@@ -202,7 +165,7 @@ const services = [
   },
 ];
 
-const TABS = ['All Services', 'Numerology', 'Business & Brand', 'Graphology', 'Vastu & Energy', 'Coaching'];
+const TABS = ['All Services', 'Numerology', 'Business & Brand', 'Graphology', 'Coaching'];
 
 export default function ServicesGrid() {
   const searchParams = useSearchParams();

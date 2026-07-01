@@ -11,11 +11,9 @@ import {
   Users,
   ShieldCheck,
   Calculator,
-  PenTool,
   Feather,
-  Map,
   Brain,
-  Sparkles,
+  Watch,
   Smartphone,
   Briefcase,
   Star,
@@ -36,7 +34,7 @@ export default function Home() {
             <span className={styles.heroTag}>Clarity • Balance • Harmony</span>
             <h1 className={styles.heroTitle}>Find Clarity.<br/>Invite Positivity.<br/>Live Your Best Life.</h1>
             <p className={styles.heroDesc}>
-              Expert guidance in Numerology, Graphology, Mokshapatam &amp; more to help you make better decisions and live a balanced life.
+              Expert guidance in Numerology, Graphotherapy, NLP Therapy &amp; more to help you make better decisions and live a balanced life.
             </p>
             <div className={styles.heroActions}>
               <Link href="/contact" className="btn-primary">
@@ -120,29 +118,11 @@ export default function Home() {
 
             <div className={styles.card}>
               <div className={styles.cardIcon}>
-                <PenTool size={40} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.cardTitle}>Graphology</h3>
-              <p className={styles.cardDesc}>Understand personality through handwriting.</p>
-              <Link href="/services?category=Graphology" className={styles.linkArrow}>Explore →</Link>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
                 <Feather size={40} strokeWidth={1.5} />
               </div>
               <h3 className={styles.cardTitle}>Graphotherapy</h3>
               <p className={styles.cardDesc}>Improve life with handwriting correction techniques.</p>
               <Link href="/services?category=Graphology" className={styles.linkArrow}>Explore →</Link>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <Map size={40} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.cardTitle}>Mokshapatam</h3>
-              <p className={styles.cardDesc}>Ancient wisdom to map your soul&apos;s journey.</p>
-              <Link href="/services?category=Coaching" className={styles.linkArrow}>Explore →</Link>
             </div>
 
             <div className={styles.card}>
@@ -156,11 +136,11 @@ export default function Home() {
 
             <div className={styles.card}>
               <div className={styles.cardIcon}>
-                <Sparkles size={40} strokeWidth={1.5} />
+                <Watch size={40} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.cardTitle}>Hypnotherapy</h3>
-              <p className={styles.cardDesc}>Access deep relaxation to heal past trauma.</p>
-              <Link href="/services?category=Coaching" className={styles.linkArrow}>Explore →</Link>
+              <h3 className={styles.cardTitle}>Wrist Watch Analysis</h3>
+              <p className={styles.cardDesc}>Find the right dial, strap and wrist for your number.</p>
+              <Link href="/services?category=Numerology" className={styles.linkArrow}>Explore →</Link>
             </div>
           </div>
         </div>
