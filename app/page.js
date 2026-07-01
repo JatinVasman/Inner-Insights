@@ -19,7 +19,9 @@ import {
   Star,
   Activity,
   Heart,
-  PenTool
+  PenTool,
+  Map,
+  Sparkles
 } from 'lucide-react';
 import ServicesSection from './components/ServicesSection';
 import styles from './page.module.css';
