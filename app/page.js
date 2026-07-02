@@ -130,15 +130,6 @@ export default function Home() {
 
             <div className={styles.card}>
               <div className={styles.cardIcon}>
-                <Brain size={40} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.cardTitle}>NLP Therapy</h3>
-              <p className={styles.cardDesc}>Reprogram your mind for success and growth.</p>
-              <Link href="/services?category=Coaching" className={styles.linkArrow}>Explore →</Link>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
                 <Watch size={40} strokeWidth={1.5} />
               </div>
               <h3 className={styles.cardTitle}>Wrist Watch Analysis</h3>
