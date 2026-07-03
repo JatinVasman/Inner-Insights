@@ -21,7 +21,8 @@ import {
   Heart,
   PenTool,
   Map,
-  Sparkles
+  Sparkles,
+  Palette
 } from 'lucide-react';
 import ServicesSection from './components/ServicesSection';
 import styles from './page.module.css';
@@ -135,6 +136,15 @@ export default function Home() {
               <h3 className={styles.cardTitle}>Wrist Watch Analysis</h3>
               <p className={styles.cardDesc}>Find the right dial, strap and wrist for your number.</p>
               <Link href="/services?category=Numerology" className={styles.linkArrow}>Explore →</Link>
+            </div>
+
+            <div className={styles.card}>
+              <div className={styles.cardIcon}>
+                <Palette size={40} strokeWidth={1.5} />
+              </div>
+              <h3 className={styles.cardTitle}>Scientific Logo Design</h3>
+              <p className={styles.cardDesc}>A logo shaped by numerological &amp; colour principles, aligned to your business number for energy and impact.</p>
+              <Link href="/services?category=Business+%26+Brand" className={styles.linkArrow}>Explore →</Link>
             </div>
           </div>
         </div>
