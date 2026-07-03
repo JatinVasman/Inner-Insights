@@ -23,7 +23,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://innerinsights.net'),
   title: {
-    default: 'Inner Insights | Numerology, Graphology & Mokshapatam by Priyanka Agrawal',
+    default: 'Inner Insights | Logo Analysis, Wristwatch Analysis & Graphotherapy Experts',
     template: '%s | Inner Insights',
   },
   description:
